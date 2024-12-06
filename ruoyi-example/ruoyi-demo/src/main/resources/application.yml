@@ -50,12 +50,12 @@ spring:
           password: ${datasource.system-master.password}
         sharding:
           lazy: true
-          type: ${spring.datasource.type}
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          # shardingproxy 服务的ip地址
-          url: jdbc:mysql://127.0.0.1:3307/data-center_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
-          username: root
-          password: root
+#          type: ${spring.datasource.type}
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#          # shardingproxy 服务的ip地址
+#          url: jdbc:mysql://127.0.0.1:3307/data-center_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+#          username: root
+#          password: root
 #        oracle:
 #          type: ${spring.datasource.type}
 #          driverClassName: oracle.jdbc.OracleDriver
@@ -65,11 +65,11 @@ spring:
 #          hikari:
 #            connectionTestQuery: SELECT 1 FROM DUAL
 #        postgres:
-#          type: ${spring.datasource.type}
-#          driverClassName: org.postgresql.Driver
-#          url: ${datasource.system-postgres.url}
-#          username: ${datasource.system-postgres.username}
-#          password: ${datasource.system-postgres.password}
+          type: ${spring.datasource.type}
+          driverClassName: org.postgresql.Driver
+          url: ${datasource.system-master.url}
+          username: ${datasource.system-master.username}
+          password: ${datasource.system-master.password}
 
 --- # elasticsearch 功能配置
 # 文档地址: https://www.easy-es.cn/
